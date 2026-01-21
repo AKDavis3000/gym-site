@@ -1,0 +1,393 @@
+@import './components/colors.scss';
+@import './components/fonts.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: $background;
+  color: white;
+  font-family: $content;
+}
+
+/*-------HERO---------*/
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -2;
+
+  .inner-hero-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+
+    /*-------NAV---------*/
+    header {
+      display: flex;
+      position: sticky;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+      font-family: $header;
+      font-size: 18px;
+
+      p {
+        margin-right: auto;
+        a {
+          color: white;
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+
+        li {
+          a {
+            color: white;
+          }
+        }
+      }
+
+      .fa-x,
+      .fa-bars {
+        display: none;
+      }
+
+      button {
+        font-family: $header;
+        background-color: $chili-red;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 15px;
+        border: none;
+      }
+    }
+    /*------- END NAV---------*/
+
+    /*------- CALL TO ACTION---------*/
+
+    div {
+      margin-top: 150px;
+      width: clamp(480px, 60%, 800px);
+      height: 40%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      p:nth-child(1) {
+        font-family: $header;
+        font-size: clamp(2rem, 5vw, 4.5rem);
+      }
+
+      p:nth-child(2) {
+        width: 80%;
+        line-height: 2.5;
+      }
+
+      // look up how to make this a variable or something so i stay DRY
+      button {
+        font-family: $header;
+        background-color: $chili-red;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 15px;
+        border: none;
+        margin-top: 10px;
+        width: fit-content;
+      }
+    }
+    /*-------END CALL TO ACTION---------*/
+  }
+
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/*-------END HERO---------*/
+// i dont think i need this
+// .hero-container::before {
+//   content: '';
+//   position: absolute;
+//   background-color: rgba(0, 0, 0, 0.8);
+//   z-index: -1;
+// }
+/*-------ABOUT---------*/
+.about-us {
+  // background-color: pink;
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+
+  img {
+    height: 500px;
+    object-fit: cover;
+  }
+
+  div {
+    // background-color: red;
+    width: 400px;
+    padding: 10px;
+
+    p:nth-child(1) {
+      font-family: $header;
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+
+    p:nth-child(2) {
+      line-height: 1.9;
+      margin-top: 10px;
+    }
+
+    button {
+      font-family: $header;
+      background-color: $chili-red;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 15px;
+      border: none;
+      margin-top: 10px;
+    }
+  }
+}
+/*-------END ABOUT---------*/
+
+/*-------SERVICES---------*/
+.services {
+  background-color: $chili-red;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+
+  h2 {
+    font-family: $header;
+    margin: 15px 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    li {
+      figure {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 15px;
+
+        a {
+          img {
+            height: 275px;
+            width: 275px;
+            border-radius: 15px;
+          }
+        }
+
+        figcaption {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          gap: 2rem;
+          border-radius: 15px;
+
+          main {
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 2rem;
+
+            h3 {
+              margin: 2rem 0;
+              font-family: $header;
+            }
+            p {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// hovers
+figure:hover figcaption {
+  background: linear-gradient(180deg, rgba(21, 22, 24, 0.8) 0%, #151618 100%);
+}
+
+figure:hover main {
+  opacity: 1 !important;
+}
+
+/*-------END SERVICES---------*/
+
+/*-------FOOTER---------*/
+footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  // grid-template-rows: 300px 265px;
+  grid-template-rows: 300px 170px;
+  background-color: #0f0f0f;
+  border-top: 1px solid grey;
+  gap: 0;
+
+  .footer-section-1 {
+    padding: 20px;
+    border-right: 1px solid grey;
+
+    h2 {
+      font-family: $header;
+      margin-top: 10px;
+    }
+
+    p {
+      width: 60%;
+      margin-top: 10px;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin-top: 10px;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footer-section-2 {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    line-height: 1.9;
+
+    .business-info {
+      iframe {
+        border-radius: 5px;
+        height: 200px;
+        width: 300px;
+      }
+    }
+  }
+
+  .footer-section-3 {
+    grid-column: span 2;
+    display: flex;
+    border-top: 1px solid grey;
+    color: rgba(187, 185, 189, 0.3);
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
+    div {
+      overflow-y: hidden;
+      height: 165px;
+      justify-self: center;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      span {
+        font-size: 10em;
+      }
+    }
+
+    p {
+      margin-left: auto;
+    }
+  }
+}
+
+/*-------END FOOTER---------*/
+
+/*-------MEDIA QUERIES---------*/
+
+@media (max-width: 768px) {
+  // hero
+  .hero-container {
+    .inner-hero-container {
+      // nav
+      header {
+        ul {
+          display: none;
+          background-color: pink;
+          width: 80%;
+          height: 500px;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          text-align: center;
+
+          .fa-x {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+          }
+
+          li {
+            margin: 40px 0;
+          }
+        }
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // about
+  .about-us {
+    flex-direction: column;
+
+    div {
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // footer
+  footer {
+    display: block;
+
+    .footer-section-3 {
+      height: 210px;
+    }
+  }
+}
+
+// @media (max-width: 1130px) {
+
+// }
