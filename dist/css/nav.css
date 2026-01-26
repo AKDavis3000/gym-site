@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+  font-family: "Noto Sans Math", sans-serif;
+}
+
+header {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 18px;
+}
+header p {
+  margin-right: auto;
+}
+header p a {
+  color: white;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+header ul li {
+  cursor: pointer;
+}
+header ul li a {
+  position: relative;
+  color: white;
+}
+header ul a::after {
+  content: "";
+  position: absolute;
+  background-color: #ba1f1f;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+header ul a:hover::after {
+  width: 100%;
+}
+header .fa-x,
+header .fa-bars {
+  display: none;
+}
+header button {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  background-color: #ba1f1f;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=nav.css.map */

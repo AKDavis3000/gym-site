@@ -1,1 +1,18 @@
-/*# sourceMappingURL=about.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+.about-us-container {
+  height: 450px;
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-image: url(/img/weights-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-us-container p {
+  font-size: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}/*# sourceMappingURL=about.css.map */

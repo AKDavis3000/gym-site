@@ -1,0 +1,79 @@
+@import './components/colors.scss';
+@import './components/fonts.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: $background;
+  color: white;
+  font-family: $content;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  font-family: $header;
+  font-size: 18px;
+
+  p {
+    margin-right: auto;
+    a {
+      color: white;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+
+    li {
+      cursor: pointer;
+
+      a {
+        position: relative;
+        color: white;
+      }
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      background-color: $chili-red;
+      height: 2px;
+      width: 0;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+  }
+
+  .fa-x,
+  .fa-bars {
+    display: none;
+  }
+
+  button {
+    font-family: $header;
+    background-color: $chili-red;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+}
