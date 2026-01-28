@@ -1,11 +1,8 @@
-@import './components/colors.scss';
-@import './components/fonts.scss';
+@use 'components/index' as i;
 
 .about-us-container {
-  height: 450px;
-  width: 98%;
-  margin: 0 auto;
-  border-radius: 10px;
+  height: 475px;
+  width: 100%;
   background-image: url(/img/weights-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,6 +14,93 @@
   p {
     // font-size: clamp();
     font-size: 3rem;
-    font-family: $header;
+    font-family: i.$header;
+  }
+}
+
+.company-description {
+  display: flex;
+  gap: 10px;
+  // idk if i need this
+  // width: 100%;
+  margin: 50px 5px 20px 5px;
+  // background-color: pink;
+  padding: 10px;
+  // justify-content: space-around;
+
+  .company-wrapper {
+    width: 60%;
+    // background-color: blue;
+  }
+
+  .description,
+  .what-we-do,
+  .mission {
+    // margin: 20px;
+    line-height: 2.5;
+
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-family: i.$header;
+      // background-color: pink;
+      position: relative;
+      width: 170px;
+    }
+
+    .mission-statement {
+      width: 250px;
+    }
+
+    .title::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: i.$chili-red;
+    }
+  }
+
+  .image {
+    // justify-self: flex-end;
+    width: 475px;
+    height: 600px;
+    // height: 100%;
+    // margin: 0 auto;
+    // overflow: hidden;
+    // background-color: orange;
+
+    img {
+      // object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// fix the image for mobile, one side of the image is touching the edge
+@media (max-width: 410px) {
+  .company-description {
+    .image {
+      width: 350px;
+      height: 425px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .company-description {
+    flex-direction: column;
+    .company-wrapper {
+      width: 100%;
+      // background-color: pink;
+    }
+
+    .image {
+      width: 425px;
+      height: 100%;
+    }
   }
 }

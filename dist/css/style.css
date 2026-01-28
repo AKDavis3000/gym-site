@@ -27,21 +27,26 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
-  /*-------NAV---------*/
+  /*-------INDEX NAV---------*/
   /*------- END NAV---------*/
   /*------- CALL TO ACTION---------*/
   /*-------END CALL TO ACTION---------*/
 }
 .hero-container .inner-hero-container header {
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  width: 100%;
+  position: fixed;
+  width: 98%;
+  top: 0;
+  left: 0;
+  transform: translate(1%, 5%);
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
   font-family: "Zalando Sans Expanded", sans-serif;
   font-size: 18px;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(21, 22, 24, 0.3) 0%, rgba(21, 22, 24, 0.5) 100%);
+  border-radius: 25px;
 }
 .hero-container .inner-hero-container header p {
   margin-right: auto;
@@ -52,7 +57,7 @@ a {
 .hero-container .inner-hero-container header ul {
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  width: 60%;
 }
 .hero-container .inner-hero-container header ul li {
   cursor: pointer;
@@ -86,25 +91,28 @@ a {
   border: none;
   cursor: pointer;
 }
-.hero-container .inner-hero-container div {
-  margin-top: 150px;
+.hero-container .inner-hero-container .call-to-action {
   width: clamp(480px, 60%, 800px);
   height: 40%;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
-.hero-container .inner-hero-container div p:nth-child(1) {
+.hero-container .inner-hero-container .call-to-action div {
+  margin-top: 180px;
+  margin-left: 70px;
+}
+.hero-container .inner-hero-container .call-to-action div p:nth-child(1) {
   font-family: "Zalando Sans Expanded", sans-serif;
   font-size: clamp(2rem, 5vw, 4.5rem);
+  width: 60%;
 }
-.hero-container .inner-hero-container div p:nth-child(2) {
+.hero-container .inner-hero-container .call-to-action div p:nth-child(2) {
   width: 80%;
   line-height: 2.5;
 }
-.hero-container .inner-hero-container div button {
+.hero-container .inner-hero-container .call-to-action div button {
   font-family: "Zalando Sans Expanded", sans-serif;
   background-color: #ba1f1f;
   color: white;
@@ -355,30 +363,25 @@ a {
     cursor: pointer;
   }
   .hero-container .inner-hero-container header ul li {
-    margin: 40px 0;
+    margin: 40px 5px;
+    background-color: pink;
   }
   .hero-container .inner-hero-container header button {
     display: none;
   }
-  .about-us {
+  .about-us-container {
     flex-direction: column;
   }
-  .about-us div button {
+  .about-us-container div button {
     margin-top: 10px;
   }
   .membership-container .membership-inner-container {
     display: block;
     height: auto;
   }
-  .membership-container .membership-inner-container div {
+  .membership-container .membership-inner-container .membership {
     width: 100%;
     height: 200px;
     margin: 5px 0;
-  }
-  footer {
-    display: block;
-  }
-  footer .footer-section-3 {
-    height: 210px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@
 footer {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 300px 170px;
+  grid-template-rows: auto 50px;
   background-color: #0f0f0f;
   border-top: 1px solid grey;
   gap: 0;
@@ -36,11 +36,14 @@ footer .footer-section-1 ul li {
 footer .footer-section-1 ul li a {
   color: white;
 }
+footer .footer-section-1 ul .hours-title {
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
 footer .footer-section-2 {
   padding: 15px;
   display: flex;
   gap: 10px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   line-height: 1.9;
 }
 footer .footer-section-2 .business-info iframe {
@@ -50,29 +53,33 @@ footer .footer-section-2 .business-info iframe {
 }
 footer .footer-section-3 {
   grid-column: span 2;
-  display: flex;
   border-top: 1px solid grey;
   color: rgba(187, 185, 189, 0.3);
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-}
-footer .footer-section-3 div {
-  overflow-y: hidden;
-  height: 165px;
-  justify-self: center;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-footer .footer-section-3 div span {
-  font-size: 10em;
 }
 footer .footer-section-3 p {
-  margin-left: auto;
   padding: 5px;
 }
 
-/*-------END FOOTER---------*//*# sourceMappingURL=footer.css.map */
+/*-------END FOOTER---------*/
+/*-------MEDIA QUERIES---------*/
+@media (max-width: 768px) {
+  footer {
+    display: block;
+  }
+  footer .footer-section-1 {
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+  }
+  footer .footer-section-2 {
+    display: block;
+    border: 1px solid grey;
+  }
+  footer .footer-section-2 div {
+    margin: 10px 0;
+  }
+  footer .footer-section-3 {
+    height: 50px;
+    border: 1px solid grey;
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,5 +1,4 @@
-@import './components/colors.scss';
-@import './components/fonts.scss';
+@use 'index' as i;
 
 * {
   box-sizing: border-box;
@@ -10,70 +9,125 @@
 }
 
 body {
-  background-color: $background;
+  background-color: i.$background;
   color: white;
-  font-family: $content;
+  font-family: i.$content;
+  position: relative;
 }
 
+// how to center this
 header {
   display: flex;
-  position: sticky;
+  position: fixed;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  top: 5px;
   padding: 20px;
-  font-family: $header;
+  font-family: i.$header;
   font-size: 18px;
+  background-color: black;
+  border-radius: 25px;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 22, 24, 0.3) 0%,
+    rgba(21, 22, 24, 0.5) 100%
+  );
 
   p {
-    margin-right: auto;
+    // margin-right: auto;
     a {
       color: white;
     }
   }
 
-  ul {
+  nav {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    // background-color: orange;
+    width: 80%;
+    justify-content: flex-end;
+    // align-items: center;
+    // padding: 20px;
+    // font-family: i.$header;
+    // font-size: 18px;
 
-    li {
-      cursor: pointer;
+    ul {
+      display: flex;
+      // justify-content: space-around;
+      // width: 80%;
 
-      a {
-        position: relative;
-        color: white;
+      li {
+        margin: 0 20px;
+
+        cursor: pointer;
+
+        a {
+          position: relative;
+          color: white;
+        }
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        background-color: i.$chili-red;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+      }
+
+      a:hover::after {
+        width: 100%;
       }
     }
 
-    a::after {
-      content: '';
-      position: absolute;
-      background-color: $chili-red;
-      height: 2px;
-      width: 0;
-      left: 0;
-      bottom: -5px;
-      transition: 0.3s;
-    }
-
-    a:hover::after {
-      width: 100%;
+    .fa-x,
+    .fa-bars {
+      display: none;
     }
   }
-
-  .fa-x,
-  .fa-bars {
-    display: none;
-  }
-
   button {
-    font-family: $header;
-    background-color: $chili-red;
+    font-family: i.$header;
+    background-color: i.$chili-red;
     color: white;
     border-radius: 30px;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  // nav
+  header {
+    nav {
+      ul {
+        display: none;
+        background-color: pink;
+        width: 80%;
+        height: 500px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        text-align: center;
+
+        .fa-x {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          cursor: pointer;
+        }
+
+        li {
+          margin: 40px 0;
+        }
+      }
+    }
+
+    button {
+      display: none;
+    }
   }
 }

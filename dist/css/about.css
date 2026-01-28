@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
 .about-us-container {
-  height: 450px;
-  width: 98%;
-  margin: 0 auto;
-  border-radius: 10px;
+  height: 475px;
+  width: 100%;
   background-image: url(/img/weights-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,4 +13,71 @@
 .about-us-container p {
   font-size: 3rem;
   font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.company-description {
+  display: flex;
+  gap: 10px;
+  margin: 50px 5px 20px 5px;
+  padding: 10px;
+}
+.company-description .company-wrapper {
+  width: 60%;
+}
+.company-description .description,
+.company-description .what-we-do,
+.company-description .mission {
+  line-height: 2.5;
+}
+.company-description .description .title,
+.company-description .what-we-do .title,
+.company-description .mission .title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  position: relative;
+  width: 170px;
+}
+.company-description .description .mission-statement,
+.company-description .what-we-do .mission-statement,
+.company-description .mission .mission-statement {
+  width: 250px;
+}
+.company-description .description .title::after,
+.company-description .what-we-do .title::after,
+.company-description .mission .title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ba1f1f;
+}
+.company-description .image {
+  width: 475px;
+  height: 600px;
+}
+.company-description .image img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 410px) {
+  .company-description .image {
+    width: 350px;
+    height: 425px;
+  }
+}
+@media (max-width: 850px) {
+  .company-description {
+    flex-direction: column;
+  }
+  .company-description .company-wrapper {
+    width: 100%;
+  }
+  .company-description .image {
+    width: 425px;
+    height: 100%;
+  }
 }/*# sourceMappingURL=about.css.map */
