@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+.amenities-hero {
+  height: 500px;
+  width: 100%;
+  background-image: url(/img/background-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amenities-hero p {
+  font-size: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.amenities-container {
+  margin: 40px 0;
+  padding: 20px;
+}
+.amenities-container .amenity {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  margin: 40px 0;
+}
+.amenities-container .amenity .description {
+  width: 40%;
+  line-height: 2.2;
+}
+.amenities-container .amenity .description .title {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  position: relative;
+  width: 60px;
+  text-align: center;
+}
+.amenities-container .amenity .description .weight-lifting {
+  width: 170px;
+}
+.amenities-container .amenity .description .classes,
+.amenities-container .amenity .description .aqua-center {
+  width: 185px;
+}
+.amenities-container .amenity .description .cycling {
+  width: 95px;
+}
+.amenities-container .amenity .description .title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ba1f1f;
+}
+.amenities-container .amenity .image {
+  height: 400px;
+  width: 50%;
+}
+.amenities-container .amenity .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=amenities.css.map */

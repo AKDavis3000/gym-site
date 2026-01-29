@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+.classes-hero {
+  height: 500px;
+  width: 100%;
+  background-image: url(/img/header-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.classes-hero p {
+  font-size: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}/*# sourceMappingURL=classes.css.map */

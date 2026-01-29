@@ -1,0 +1,81 @@
+@use 'components/index' as i;
+
+.amenities-hero {
+  height: 500px;
+  width: 100%;
+  background-image: url(/img/background-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    // font-size: clamp();
+    font-size: 3rem;
+    font-family: i.$header;
+  }
+}
+
+.amenities-container {
+  margin: 40px 0;
+  padding: 20px;
+
+  .amenity {
+    display: flex;
+    gap: 60px;
+    // background-color: pink;
+    width: 100%;
+    margin: 40px 0;
+
+    .description {
+      width: 40%;
+      line-height: 2.2;
+
+      .title {
+        font-family: i.$header;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+        position: relative;
+        width: 60px;
+        text-align: center;
+      }
+
+      .weight-lifting {
+        width: 170px;
+      }
+
+      .classes,
+      .aqua-center {
+        width: 185px;
+      }
+
+      .cycling {
+        width: 95px;
+      }
+
+      .title::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: i.$chili-red;
+      }
+    }
+
+    .image {
+      height: 400px;
+      width: 50%;
+      // background-color: green;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

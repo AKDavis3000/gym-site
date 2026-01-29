@@ -1,0 +1,19 @@
+@use 'components/index' as i;
+
+.classes-hero {
+  height: 500px;
+  width: 100%;
+  background-image: url(/img/header-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    // font-size: clamp();
+    font-size: 3rem;
+    font-family: i.$header;
+  }
+}

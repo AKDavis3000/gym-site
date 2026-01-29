@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+.meet-trainers {
+  height: 500px;
+  width: 100%;
+  background-image: url(/img/header-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meet-trainers p {
+  font-size: 3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+.trainers .title {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.5rem;
+  margin: 50px auto 20px auto;
+  width: 245px;
+  position: relative;
+  text-align: center;
+}
+.trainers .title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ba1f1f;
+}
+.trainers .title-description {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.trainers .trainers-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 50px auto;
+}
+.trainers .trainers-wrapper figure {
+  height: 375px;
+  width: 275px;
+  position: relative;
+  z-index: -5;
+  margin: 20px 0;
+}
+.trainers .trainers-wrapper figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.trainers .trainers-wrapper figure figcaption {
+  position: absolute;
+  width: 260px;
+  height: 150px;
+  background-color: #ba1f1f;
+  top: 75%;
+  left: 8px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.trainers .trainers-wrapper figure figcaption p:nth-child(1) {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=trainers.css.map */
