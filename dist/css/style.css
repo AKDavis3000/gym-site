@@ -13,10 +13,6 @@ body {
   font-family: "Noto Sans Math", sans-serif;
 }
 
-a {
-  color: white;
-}
-
 /*-------HERO---------*/
 .hero-container {
   width: 100%;
@@ -27,69 +23,8 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
-  /*-------INDEX NAV---------*/
-  /*------- END NAV---------*/
   /*------- CALL TO ACTION---------*/
   /*-------END CALL TO ACTION---------*/
-}
-.hero-container .inner-hero-container header {
-  display: flex;
-  position: fixed;
-  width: 98%;
-  top: 0;
-  left: 0;
-  transform: translate(1%, 5%);
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px;
-  font-family: "Zalando Sans Expanded", sans-serif;
-  font-size: 18px;
-  z-index: 2;
-  background: linear-gradient(180deg, rgba(21, 22, 24, 0.3) 0%, rgba(21, 22, 24, 0.5) 100%);
-  border-radius: 25px;
-}
-.hero-container .inner-hero-container header p {
-  margin-right: auto;
-}
-.hero-container .inner-hero-container header p a {
-  color: white;
-}
-.hero-container .inner-hero-container header ul {
-  display: flex;
-  justify-content: space-around;
-  width: 60%;
-}
-.hero-container .inner-hero-container header ul li {
-  cursor: pointer;
-}
-.hero-container .inner-hero-container header ul li a {
-  position: relative;
-}
-.hero-container .inner-hero-container header ul a::after {
-  content: "";
-  position: absolute;
-  background-color: #ba1f1f;
-  height: 2px;
-  width: 0;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
-}
-.hero-container .inner-hero-container header ul a:hover::after {
-  width: 100%;
-}
-.hero-container .inner-hero-container header .fa-x,
-.hero-container .inner-hero-container header .fa-bars {
-  display: none;
-}
-.hero-container .inner-hero-container header button {
-  font-family: "Zalando Sans Expanded", sans-serif;
-  background-color: #ba1f1f;
-  color: white;
-  border-radius: 30px;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
 }
 .hero-container .inner-hero-container .call-to-action {
   width: clamp(480px, 60%, 800px);
@@ -297,7 +232,7 @@ a {
   flex-direction: column;
   color: black;
   justify-content: space-between;
-  transform: scale(1);
+  transform: scale(0.99);
 }
 .membership-container .membership-inner-container .membership main .tier {
   color: #ba1f1f;
@@ -338,33 +273,54 @@ a {
   align-self: flex-end;
 }
 .membership-container .membership:hover {
-  transform: scale(1.05);
-  transition-duration: 0.2s;
+  transform: scale(1);
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 
 /*-------END MEMBERSHIP---------*/
 /*-------MEDIA QUERIES---------*/
 @media (max-width: 768px) {
-  .hero-container .inner-hero-container header ul {
-    display: none;
-    background-color: pink;
-    width: 80%;
-    height: 500px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    text-align: center;
+  .hero-container .inner-hero-container header {
+    position: relative;
   }
-  .hero-container .inner-hero-container header ul .fa-x {
+  .hero-container .inner-hero-container header nav {
+    color: black;
+    background-color: #fcf7f2;
+    color: black;
+    width: 100%;
+    height: 400px;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    top: 0;
+    right: 800px;
+    padding: 30px;
+    text-align: left;
+    display: block;
+    border-radius: 10px;
+  }
+  .hero-container .inner-hero-container header nav .nav-control-logo {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    color: #ba1f1f;
+  }
+  .hero-container .inner-hero-container header nav .nav-control-logo .fa-x {
     cursor: pointer;
+    color: black;
+  }
+  .hero-container .inner-hero-container header ul {
+    display: block;
   }
   .hero-container .inner-hero-container header ul li {
     margin: 40px 5px;
-    background-color: pink;
+    color: black;
+  }
+  .hero-container .inner-hero-container header ul li a {
+    color: black;
+  }
+  .hero-container .inner-hero-container header .fa-x,
+.hero-container .inner-hero-container header .fa-bars {
+    display: block;
   }
   .hero-container .inner-hero-container header button {
     display: none;

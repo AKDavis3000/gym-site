@@ -56,12 +56,9 @@ footer .footer-section-3 {
   border-top: 1px solid grey;
   color: rgba(187, 185, 189, 0.3);
   text-align: center;
-}
-footer .footer-section-3 p {
   padding: 5px;
 }
 
-/*-------END FOOTER---------*/
 /*-------MEDIA QUERIES---------*/
 @media (max-width: 768px) {
   footer {

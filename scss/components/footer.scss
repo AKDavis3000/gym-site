@@ -68,31 +68,22 @@ footer {
     border-top: 1px solid grey;
     color: rgba(187, 185, 189, 0.3);
     text-align: center;
-
-    p {
-      padding: 5px;
-    }
+    padding: 5px;
   }
 }
-
-/*-------END FOOTER---------*/
 
 /*-------MEDIA QUERIES---------*/
 @media (max-width: 768px) {
   // footer
   footer {
-    // background-color: pink;
     display: block;
 
     .footer-section-1 {
-      // background-color: orange;
-      // border: 1px solid grey;
       border-right: 1px solid grey;
       border-left: 1px solid grey;
     }
     .footer-section-2 {
       display: block;
-      // background-color: blue;
       border: 1px solid grey;
 
       div {
