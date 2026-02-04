@@ -7,7 +7,6 @@ const navMenu = document.querySelector('nav');
 // open nav with click of bars
 const openNavMenu = () => {
   navMenu.style.display = 'block';
-
   // removes scroll while nav is open
   document.body.style.overflow = 'hidden';
 };
@@ -22,17 +21,22 @@ const closeNavMenu = () => {
 navClose.addEventListener('click', closeNavMenu);
 
 // highlight active nav link
-const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll('nav a');
-navLinks.forEach((link) => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add('active');
-  }
-});
+const highlightNavLink = () => {
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach((link) => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+};
+highlightNavLink();
 
 // loader
-const loaderContainer = document.querySelector('.loader-container');
+const siteLoader = () => {
+  const loaderContainer = document.querySelector('.loader-container');
 
-window.addEventListener('load', () => {
-  loaderContainer.classList.add('hidden');
-});
+  window.addEventListener('load', () => {
+    loaderContainer.classList.add('hidden');
+  });
+};
+siteLoader();
