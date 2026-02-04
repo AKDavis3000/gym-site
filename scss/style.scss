@@ -14,6 +14,10 @@ body {
   font-family: i.$content;
 }
 
+button {
+  @include i.btn;
+}
+
 /*-------HERO---------*/
 .hero-container {
   width: 100%;
@@ -26,7 +30,6 @@ body {
     background: rgba(0, 0, 0, 0.3);
 
     /*------- CALL TO ACTION---------*/
-
     .call-to-action {
       width: clamp(480px, 60%, 800px);
       height: 40%;
@@ -48,19 +51,6 @@ body {
         p:nth-child(2) {
           width: 80%;
           line-height: 2.5;
-          // background-color: red;
-        }
-
-        // look up how to make this a variable or something so i stay DRY
-        button {
-          font-family: i.$header;
-          background-color: i.$chili-red;
-          color: white;
-          border-radius: 30px;
-          padding: 10px 15px;
-          border: none;
-          margin-top: 10px;
-          width: fit-content;
         }
       }
     }
@@ -107,16 +97,6 @@ body {
 
     p:nth-child(2) {
       line-height: 1.9;
-      margin-top: 10px;
-    }
-
-    button {
-      font-family: i.$header;
-      background-color: i.$chili-red;
-      color: white;
-      border-radius: 30px;
-      padding: 10px 15px;
-      border: none;
       margin-top: 10px;
     }
   }
@@ -196,6 +176,7 @@ body {
       }
     }
   }
+
   // pseudo elements and transitions
   figcaption::before {
     content: '';
@@ -299,12 +280,6 @@ body {
       }
 
       button {
-        font-family: i.$header;
-        background-color: i.$chili-red;
-        color: white;
-        border-radius: 30px;
-        padding: 10px 15px;
-        border: none;
         cursor: pointer;
         font-size: 1.1rem;
       }

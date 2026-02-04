@@ -12,6 +12,7 @@ body {
   color: white;
   font-family: "Noto Sans Math", sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 header {
@@ -56,18 +57,29 @@ header ul li a {
   position: relative;
   color: white;
 }
-header ul a::after {
+header ul li a::after {
   content: "";
   position: absolute;
-  background-color: #ba1f1f;
   height: 2px;
   width: 0;
   left: 0;
-  bottom: -5px;
+  bottom: 0;
+  background-color: #ba1f1f;
+}
+header ul a::after {
   transition: 0.3s;
 }
 header ul a:hover::after {
   width: 100%;
+}
+header ul .active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ba1f1f;
 }
 header .fa-x,
 header .fa-bars {
@@ -88,16 +100,17 @@ header button {
     position: relative;
   }
   header nav {
-    display: block;
+    display: none;
     padding: 30px;
     width: 100%;
     height: 400px;
     position: absolute;
     top: 0;
-    right: 800px;
+    right: 0;
     text-align: left;
     background-color: #fcf7f2;
     border-radius: 10px;
+    transition: 0.8s ease-in-out;
   }
   header nav .nav-control-logo {
     display: flex;

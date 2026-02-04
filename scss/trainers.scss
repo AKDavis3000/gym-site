@@ -1,15 +1,8 @@
 @use 'components/index' as i;
 
 .meet-trainers {
-  height: 500px;
-  width: 100%;
+  @include i.hero;
   background-image: url(/img/header-3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   p {
     font-size: 3rem;
@@ -25,16 +18,8 @@
     width: 245px;
     position: relative;
     text-align: center;
-  }
 
-  .title::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    background-color: i.$chili-red;
+    @include i.after;
   }
 
   .title-description {

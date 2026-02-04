@@ -2,13 +2,13 @@
 .about-us-container {
   height: 500px;
   width: 100%;
-  background-image: url(/img/weights-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/img/weights-2.jpg);
 }
 .about-us-container p {
   font-size: 3rem;
@@ -38,11 +38,6 @@
   position: relative;
   width: 170px;
 }
-.company-description .description .mission-statement,
-.company-description .what-we-do .mission-statement,
-.company-description .mission .mission-statement {
-  width: 250px;
-}
 .company-description .description .title::after,
 .company-description .what-we-do .title::after,
 .company-description .mission .title::after {
@@ -54,11 +49,18 @@
   bottom: 0;
   background-color: #ba1f1f;
 }
+.company-description .description .mission-statement,
+.company-description .what-we-do .mission-statement,
+.company-description .mission .mission-statement {
+  width: 250px;
+}
 .company-description .image {
   width: 475px;
   height: 600px;
 }
 .company-description .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }

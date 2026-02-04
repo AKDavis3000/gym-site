@@ -1,0 +1,52 @@
+@use './colors' as m;
+@use './fonts' as n;
+
+@mixin btn {
+  font-family: n.$header;
+  background-color: m.$chili-red;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 10px;
+}
+
+@mixin hero {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin after($width: 100%) {
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: $width;
+    left: 0;
+    bottom: 0;
+    background-color: m.$chili-red;
+  }
+}
+
+@mixin loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  #barbell-loader {
+    height: 200px;
+  }
+}

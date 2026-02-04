@@ -2,13 +2,13 @@
 .amenities-hero {
   height: 500px;
   width: 100%;
-  background-image: url(/img/background-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/img/background-1.jpg);
 }
 .amenities-hero p {
   font-size: 3rem;
@@ -32,20 +32,10 @@
 .amenities-container .amenity .description .title {
   font-family: "Zalando Sans Expanded", sans-serif;
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   position: relative;
   width: 65px;
   text-align: center;
-}
-.amenities-container .amenity .description .weight-lifting {
-  width: 170px;
-}
-.amenities-container .amenity .description .classes,
-.amenities-container .amenity .description .aqua-center {
-  width: 185px;
-}
-.amenities-container .amenity .description .cycling {
-  width: 95px;
 }
 .amenities-container .amenity .description .title::after {
   content: "";
@@ -55,6 +45,16 @@
   left: 0;
   bottom: 0;
   background-color: #ba1f1f;
+}
+.amenities-container .amenity .description .weight-lifting {
+  width: 200px;
+}
+.amenities-container .amenity .description .classes,
+.amenities-container .amenity .description .aqua-center {
+  width: 205px;
+}
+.amenities-container .amenity .description .cycling {
+  width: 105px;
 }
 .amenities-container .amenity .image {
   height: 400px;
