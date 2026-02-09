@@ -98,11 +98,9 @@ header {
   }
 }
 
+/*-------MEDIA QUERIES---------*/
 @media (max-width: 768px) {
-  // nav
   header {
-    position: relative;
-
     nav {
       display: none;
       padding: 30px;

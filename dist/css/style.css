@@ -11,6 +11,7 @@ body {
   background-color: #000000;
   color: white;
   font-family: "Noto Sans Math", sans-serif;
+  overflow-x: hidden;
 }
 
 button {
@@ -33,28 +34,22 @@ button {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
   /*------- CALL TO ACTION---------*/
   /*-------END CALL TO ACTION---------*/
 }
 .hero-container .inner-hero-container .call-to-action {
-  width: clamp(480px, 60%, 800px);
-  height: 40%;
+  width: max(60%, 300px);
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-container .inner-hero-container .call-to-action div {
-  margin-top: 180px;
-  margin-left: 70px;
+  padding: 30px;
 }
 .hero-container .inner-hero-container .call-to-action div p:nth-child(1) {
   font-family: "Zalando Sans Expanded", sans-serif;
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  width: 60%;
+  font-size: clamp(1.8rem, 5vw, 4.5rem);
+  width: max(60%, 210px);
 }
 .hero-container .inner-hero-container .call-to-action div p:nth-child(2) {
-  width: 80%;
   line-height: 2.5;
 }
 .hero-container .video-bg {
@@ -71,7 +66,6 @@ button {
 /*-------END HERO---------*/
 /*-------ABOUT---------*/
 .about-us-container {
-  width: 80%;
   height: auto;
   margin: 20px auto;
   padding: 20px;
@@ -85,12 +79,11 @@ button {
      object-fit: cover;
 }
 .about-us-container div {
-  width: 400px;
-  padding: 10px;
+  padding: 30px;
 }
 .about-us-container div p:nth-child(1) {
   font-family: "Zalando Sans Expanded", sans-serif;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
 .about-us-container div p:nth-child(2) {
   line-height: 1.9;
@@ -106,14 +99,16 @@ button {
   padding: 10px;
 }
 .services-container .title {
+  padding: 5px;
   font-family: "Zalando Sans Expanded", sans-serif;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
 .services-container ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 7px;
 }
 .services-container ul li {
   margin-bottom: 15px;
@@ -127,8 +122,8 @@ button {
   overflow: hidden;
 }
 .services-container ul li figure a img {
-  height: 275px;
-  width: 275px;
+  height: 260px;
+  width: 260px;
   border-radius: 15px;
   transform: scale(1.2);
   transition-property: transform;
@@ -154,7 +149,7 @@ button {
 }
 .services-container ul li figure figcaption main p:nth-child(1) {
   font-family: "Zalando Sans Expanded", sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 2vw, 1.4rem);
   margin: 2rem 0;
   font-weight: 500;
 }
@@ -264,50 +259,6 @@ button {
 /*-------END MEMBERSHIP---------*/
 /*-------MEDIA QUERIES---------*/
 @media (max-width: 768px) {
-  .hero-container .inner-hero-container header {
-    position: relative;
-  }
-  .hero-container .inner-hero-container header nav {
-    color: black;
-    background-color: #fcf7f2;
-    color: black;
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    top: 0;
-    right: 800px;
-    padding: 30px;
-    text-align: left;
-    display: block;
-    border-radius: 10px;
-  }
-  .hero-container .inner-hero-container header nav .nav-control-logo {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5px;
-    color: #ba1f1f;
-  }
-  .hero-container .inner-hero-container header nav .nav-control-logo .fa-x {
-    cursor: pointer;
-    color: black;
-  }
-  .hero-container .inner-hero-container header ul {
-    display: block;
-  }
-  .hero-container .inner-hero-container header ul li {
-    margin: 40px 5px;
-    color: black;
-  }
-  .hero-container .inner-hero-container header ul li a {
-    color: black;
-  }
-  .hero-container .inner-hero-container header .fa-x,
-.hero-container .inner-hero-container header .fa-bars {
-    display: block;
-  }
-  .hero-container .inner-hero-container header button {
-    display: none;
-  }
   .about-us-container {
     flex-direction: column;
   }

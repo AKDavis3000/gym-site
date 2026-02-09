@@ -12,65 +12,58 @@
 
 .company-description {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   margin: 50px 5px 20px 5px;
-  padding: 10px;
-
-  .company-wrapper {
-    width: 60%;
-  }
-
-  .description,
-  .what-we-do,
-  .mission {
-    line-height: 2.5;
-
-    .title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      font-family: i.$header;
-      position: relative;
-      width: 170px;
-
-      @include i.after;
-    }
-
-    .mission-statement {
-      width: 250px;
-    }
-  }
+  padding: 5px;
 
   .image {
-    width: 475px;
-    height: 600px;
+    div {
+      width: clamp(300px, 60vw, 475px);
+      height: 600px;
+    }
 
     img {
-      object-fit: cover;
+      object-fit: contain;
       height: 100%;
       width: 100%;
     }
   }
-}
 
-@media (max-width: 410px) {
-  .company-description {
-    .image {
-      width: 350px;
-      height: 425px;
+  .company-wrapper {
+    .description,
+    .what-we-do,
+    .mission {
+      line-height: 2.5;
+      margin-bottom: 25px;
+
+      .title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        font-family: i.$header;
+        position: relative;
+        width: 170px;
+
+        @include i.after;
+      }
+
+      .mission-statement {
+        width: 250px;
+      }
     }
   }
 }
 
-@media (max-width: 850px) {
+/*-------MEDIA QUERIES---------*/
+// @media (max-width: 500px) {
+//   .company-description {
+//     .image {
+//       width: 310px;
+//     }
+//   }
+// }
+
+@media (max-width: 768px) {
   .company-description {
     flex-direction: column;
-    .company-wrapper {
-      width: 100%;
-    }
-
-    .image {
-      width: 425px;
-      height: 100%;
-    }
   }
 }

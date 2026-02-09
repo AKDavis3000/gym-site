@@ -12,6 +12,7 @@ body {
   background-color: i.$background;
   color: white;
   font-family: i.$content;
+  overflow-x: hidden;
 }
 
 button {
@@ -28,28 +29,23 @@ button {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
 
     /*------- CALL TO ACTION---------*/
     .call-to-action {
-      width: clamp(480px, 60%, 800px);
-      height: 40%;
+      width: max(60%, 300px);
       color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 30px;
 
       div {
-        margin-top: 180px;
-        margin-left: 70px;
-
         p:nth-child(1) {
           font-family: i.$header;
-          font-size: clamp(2rem, 5vw, 4.5rem);
-          width: 60%;
+          font-size: clamp(1.8rem, 5vw, 4.5rem);
+          width: max(60%, 210px);
         }
 
         p:nth-child(2) {
-          width: 80%;
           line-height: 2.5;
         }
       }
@@ -73,7 +69,6 @@ button {
 
 /*-------ABOUT---------*/
 .about-us-container {
-  width: 80%;
   height: auto;
   margin: 20px auto;
   padding: 20px;
@@ -87,12 +82,11 @@ button {
   }
 
   div {
-    width: 400px;
-    padding: 10px;
+    padding: 30px;
 
     p:nth-child(1) {
       font-family: i.$header;
-      font-size: clamp(1rem, 2vw, 2rem);
+      font-size: clamp(1.4rem, 2vw, 2rem);
     }
 
     p:nth-child(2) {
@@ -111,15 +105,17 @@ button {
   padding: 10px;
 
   .title {
+    padding: 5px;
     font-family: i.$header;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-size: clamp(1.4rem, 2vw, 2rem);
   }
 
   ul {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 7px;
 
     li {
       margin-bottom: 15px;
@@ -134,8 +130,9 @@ button {
 
         a {
           img {
-            height: 275px;
-            width: 275px;
+            height: 260px;
+            width: 260px;
+
             border-radius: 15px;
             transform: scale(1.2);
             transition-property: transform;
@@ -163,7 +160,7 @@ button {
 
             p:nth-child(1) {
               font-family: i.$header;
-              font-size: 1.5rem;
+              font-size: clamp(1.3rem, 2vw, 1.4rem);
               margin: 2rem 0;
               font-weight: 500;
             }
@@ -303,65 +300,7 @@ button {
 /*-------END MEMBERSHIP---------*/
 
 /*-------MEDIA QUERIES---------*/
-
 @media (max-width: 768px) {
-  // hero
-  .hero-container {
-    .inner-hero-container {
-      // nav
-      header {
-        position: relative;
-
-        nav {
-          color: black;
-          background-color: #fcf7f2;
-          color: black;
-          width: 100%;
-          height: 400px;
-          position: absolute;
-          top: 0;
-          right: 800px;
-          padding: 30px;
-          text-align: left;
-          display: block;
-          border-radius: 10px;
-
-          .nav-control-logo {
-            display: flex;
-            justify-content: space-between;
-            padding-left: 5px;
-            color: i.$chili-red;
-
-            .fa-x {
-              cursor: pointer;
-              color: black;
-            }
-          }
-        }
-
-        ul {
-          display: block;
-          li {
-            margin: 40px 5px;
-            color: black;
-
-            a {
-              color: black;
-            }
-          }
-        }
-
-        .fa-x,
-        .fa-bars {
-          display: block;
-        }
-        button {
-          display: none;
-        }
-      }
-    }
-  }
-
   // about
   .about-us-container {
     flex-direction: column;

@@ -17,30 +17,38 @@
 
 .company-description {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   margin: 50px 5px 20px 5px;
-  padding: 10px;
+  padding: 5px;
 }
-.company-description .company-wrapper {
-  width: 60%;
+.company-description .image div {
+  width: clamp(300px, 60vw, 475px);
+  height: 600px;
 }
-.company-description .description,
-.company-description .what-we-do,
-.company-description .mission {
+.company-description .image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.company-description .company-wrapper .description,
+.company-description .company-wrapper .what-we-do,
+.company-description .company-wrapper .mission {
   line-height: 2.5;
+  margin-bottom: 25px;
 }
-.company-description .description .title,
-.company-description .what-we-do .title,
-.company-description .mission .title {
+.company-description .company-wrapper .description .title,
+.company-description .company-wrapper .what-we-do .title,
+.company-description .company-wrapper .mission .title {
   font-size: 1.5rem;
   margin-bottom: 10px;
   font-family: "Zalando Sans Expanded", sans-serif;
   position: relative;
   width: 170px;
 }
-.company-description .description .title::after,
-.company-description .what-we-do .title::after,
-.company-description .mission .title::after {
+.company-description .company-wrapper .description .title::after,
+.company-description .company-wrapper .what-we-do .title::after,
+.company-description .company-wrapper .mission .title::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -49,37 +57,15 @@
   bottom: 0;
   background-color: #ba1f1f;
 }
-.company-description .description .mission-statement,
-.company-description .what-we-do .mission-statement,
-.company-description .mission .mission-statement {
+.company-description .company-wrapper .description .mission-statement,
+.company-description .company-wrapper .what-we-do .mission-statement,
+.company-description .company-wrapper .mission .mission-statement {
   width: 250px;
 }
-.company-description .image {
-  width: 475px;
-  height: 600px;
-}
-.company-description .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
 
-@media (max-width: 410px) {
-  .company-description .image {
-    width: 350px;
-    height: 425px;
-  }
-}
-@media (max-width: 850px) {
+/*-------MEDIA QUERIES---------*/
+@media (max-width: 768px) {
   .company-description {
     flex-direction: column;
-  }
-  .company-description .company-wrapper {
-    width: 100%;
-  }
-  .company-description .image {
-    width: 425px;
-    height: 100%;
   }
 }/*# sourceMappingURL=about.css.map */

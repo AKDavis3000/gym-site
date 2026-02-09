@@ -95,10 +95,8 @@ header button {
   cursor: pointer;
 }
 
+/*-------MEDIA QUERIES---------*/
 @media (max-width: 768px) {
-  header {
-    position: relative;
-  }
   header nav {
     display: none;
     padding: 30px;
