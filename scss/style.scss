@@ -128,15 +128,13 @@ button {
         border-radius: 15px;
         overflow: hidden;
 
-        a {
-          img {
-            height: 260px;
-            width: 260px;
+        img {
+          height: 260px;
+          width: 260px;
 
-            border-radius: 15px;
-            transform: scale(1.2);
-            transition-property: transform;
-          }
+          border-radius: 15px;
+          transform: scale(1.2);
+          transition-property: transform;
         }
 
         figcaption {
@@ -185,7 +183,7 @@ button {
     transition-property: opacity;
   }
 
-  figure:hover figcaption::before {
+  figure:has(.active):hover figcaption::before {
     opacity: 1;
   }
 
@@ -201,14 +199,18 @@ button {
     transition-timing-function: ease-in-out;
   }
 
-  figure:hover a img {
+  figure:has(.active):hover img {
     transform: scale(1);
   }
 
-  figure:hover main {
+  figure:has(.active):hover main {
     opacity: 1 !important;
     transform: translate3d(0, 0, 0);
   }
+}
+
+.active {
+  border: 1px solid #d62222;
 }
 
 /*-------END SERVICES---------*/

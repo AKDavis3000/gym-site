@@ -15,10 +15,12 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 .loader-container #barbell-loader {
   height: 200px;
+}
+.loader-container {
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 .loader-container #barbell-loader {
   animation: 2s infinite bounce;
