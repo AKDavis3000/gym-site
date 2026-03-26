@@ -183,7 +183,7 @@ button {
     transition-property: opacity;
   }
 
-  figure:has(.active):hover figcaption::before {
+  figure:hover figcaption::before {
     opacity: 1;
   }
 
@@ -199,11 +199,11 @@ button {
     transition-timing-function: ease-in-out;
   }
 
-  figure:has(.active):hover img {
+  figure:hover img {
     transform: scale(1);
   }
 
-  figure:has(.active):hover main {
+  figure:hover main {
     opacity: 1 !important;
     transform: translate3d(0, 0, 0);
   }

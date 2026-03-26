@@ -41,14 +41,14 @@ const siteLoader = () => {
 };
 siteLoader();
 
-const activeClass = document.querySelectorAll('.active');
-const servicesImg = document.querySelectorAll('.figure');
+// const activeClass = document.querySelectorAll('.active');
+// const servicesImg = document.querySelectorAll('.figure');
 
-servicesImg.forEach((img) => {
-  img.addEventListener('touchstart', () => {
-    img.classList.add(activeClass);
-  });
-  img.addEventListener('touchend', () => {
-    img.classList.remove(activeClass);
-  });
-});
+// servicesImg.forEach((img) => {
+//   img.addEventListener('touchstart', () => {
+//     img.classList.add(activeClass);
+//   });
+//   img.addEventListener('touchend', () => {
+//     img.classList.remove(activeClass);
+//   });
+// });

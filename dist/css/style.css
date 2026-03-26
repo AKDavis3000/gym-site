@@ -167,7 +167,7 @@ button {
   opacity: 0;
   transition-property: opacity;
 }
-.services-container figure:has(.active):hover figcaption::before {
+.services-container figure:hover figcaption::before {
   opacity: 1;
 }
 .services-container figure main {
@@ -180,10 +180,10 @@ button {
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
-.services-container figure:has(.active):hover img {
+.services-container figure:hover img {
   transform: scale(1);
 }
-.services-container figure:has(.active):hover main {
+.services-container figure:hover main {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0);
 }
